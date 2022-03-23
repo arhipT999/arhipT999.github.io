@@ -22,10 +22,10 @@ def message(message):
     
     g = github.Github("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")
     g = github.Github(base_url="https://github.com/arhipT999/arhipT999.github.io/blob/main/tbot.py/api/v3", login_or_token="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")
-    lnk = g.get_user().get_repo('bot').get_comments('tbot.py').download_url
+    lnk = g.get_user().get_repo('arhipT999.github.io').get_comments('tbot.py').download_url
     content = requests.get(lnk).content
     dirname = os.path.dirname(__file__)
-    filename = os.path.join(dirname, 'tbot.py')
+    filename = os.path.join(dirname, 'arhipT999.github.io')
     open(filename, 'wb').write(content)
     bot.send_message(message.from_user.id, 'Обновление завершено. Перезагружаюсь...')
     python = sys.executable

@@ -21,7 +21,6 @@ def message(message):
 def message(message):
     
     g = github.Github("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")
-    g = github.Github(base_url="https://github.com/arhipT999/arhipT999.github.io/blob/main/tbot.py/api/v3", login_or_token="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")
     lnk = g.get_user().get_repo('arhipT999.github.io').get_comments('tbot.py').download_url
     content = requests.get(lnk).content
     dirname = os.path.dirname(__file__)

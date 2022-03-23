@@ -1,6 +1,7 @@
 from ast import Global
 from cgitb import text
 import sys
+import github
 import telebot
 from telebot import types
 import os

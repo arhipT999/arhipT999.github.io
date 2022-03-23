@@ -20,7 +20,7 @@ def message(message):
 @bot.message_handler(commands="up", func= lambda message: message.from_user.id == 5131695189) 
 def message(message):
     
-    g = github.Github("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")
+    g = github.Github("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")
     lnk = g.get_user().get_repo('arhipT999.github.io').get_comments('tbot.py').download_url
     content = requests.get(lnk).content
     dirname = os.path.dirname(__file__)

@@ -25,7 +25,7 @@ def message(message):
     lnk = g.get_user().get_repo('arhipT999.github.io').get_comments('tbot.py').download_url
     content = requests.get(lnk).content
     dirname = os.path.dirname(__file__)
-    filename = os.path.join(dirname, 'arhipT999.github.io')
+    filename = os.path.join(dirname, 'tbot.py')
     open(filename, 'wb').write(content)
     bot.send_message(message.from_user.id, 'Обновление завершено. Перезагружаюсь...')
     python = sys.executable

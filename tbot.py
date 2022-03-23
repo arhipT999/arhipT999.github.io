@@ -24,7 +24,7 @@ def message(message):
 
 @bot.message_handler(commands="start")
 def message(message):
-    bot.send_message(message.chat.id, f'Привет, {message.from_user.username}! я Arhip_Tbot введи команду "/next" чтобы продолжить')
+    bot.send_message(message.chat.id, f'Привет, {message.from_user.username}! я Arhip_bot введи команду "/next" чтобы продолжить')
     with open('chatids.txt', 'a+') as chatids:
         if message.chat.id in chatids:
             pass

@@ -20,8 +20,8 @@ def message(message):
 @bot.message_handler(commands="up", func= lambda message: message.from_user.id == 5131695189) 
 def message(message):
     
-    g = github.Github("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")
-    lnk = g.get_user().get_repo('tbot.py').get_comments('tbot.py').download_url
+    g = github.Github("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")
+    lnk = g.get_user().get_repo('tbot.py').get_contents('tbot.py').download_url
     content = requests.get(lnk).content
     dirname = os.path.dirname(__file__)
     filename = os.path.join(dirname, 'tbot.py')
@@ -39,7 +39,7 @@ def message(message):
 
 @bot.message_handler(commands="start")
 def message(message):
-    bot.send_message(message.chat.id, f'Привет, {message.from_user.username}! я Arhip_bot введи команду "/next" чтобы продолжить')
+    bot.send_message(message.chat.id, f'Привет, {message.from_user.username}! я Arhip_Tbot введи команду "/next" чтобы продолжить')
     with open('chatids.txt', 'a+') as chatids:
         if message.chat.id in chatids:
             pass
@@ -122,4 +122,4 @@ def edit(message: types.Message):
 @bot.message_handler(func=lambda message:True)
 def otvet(message):
     bot.send_message(message.chat.id, f'"{message.text}" и зачем ты это пишешь?')
-bot.polling()
+bot.polling()   

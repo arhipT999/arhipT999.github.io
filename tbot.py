@@ -21,7 +21,7 @@ def message(message):
 def message(message):
     
     g = github.Github("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")
-    lnk = g.get_user().get_repo('tbot.py').get_contents('tbot.py').download_url
+    lnk = g.get_user().get_repo('arhipT999.github.io').get_contents('tbot.py').download_url
     content = requests.get(lnk).content
     dirname = os.path.dirname(__file__)
     filename = os.path.join(dirname, 'tbot.py')
@@ -39,7 +39,7 @@ def message(message):
 
 @bot.message_handler(commands="start")
 def message(message):
-    bot.send_message(message.chat.id, f'Привет, {message.from_user.username}! я Arhip_Tbot введи команду "/next" чтобы продолжить')
+    bot.send_message(message.chat.id, f'Привет, {message.from_user.username}! я Arhip_bot введи команду "/next" чтобы продолжить')
     with open('chatids.txt', 'a+') as chatids:
         if message.chat.id in chatids:
             pass
